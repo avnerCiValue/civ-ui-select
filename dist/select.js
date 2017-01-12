@@ -332,6 +332,9 @@ uis.controller('uiSelectCtrl',
       return null;
     }
   })();
+  //civalue change -> the dropdon animtion couseing a "apply's loop" times the items length 
+   ctrl.$animate=null;
+  
 
   ctrl.searchInput = $element.querySelectorAll('input.ui-select-search');
   if (ctrl.searchInput.length !== 1) {
